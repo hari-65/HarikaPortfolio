@@ -1097,6 +1097,83 @@ section {
   color: #eaebf0;
 }
 
+/* Portfolio Image Size */
+.portfolio-img {
+  width: 100%;
+  height: 250px;  /* Maintain a consistent height */
+  object-fit: cover; /* Ensures images cover the div without distortion */
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect on images */
+.portfolio-img:hover {
+  transform: scale(1.03);
+}
+
+/* Portfolio item container styling */
+.portfolio-wrap {
+  overflow: hidden;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* For small screens (Mobile) */
+@media (max-width: 576px) {
+  .portfolio-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Stack images in a single column */
+    gap: 20px;
+  }
+
+  /* Optional: Adjust the image height for smaller screens */
+  .portfolio-img {
+    height: 200px; /* You can adjust this as needed */
+  }
+}
+
+/* For medium screens (Tablets) */
+@media (min-width: 576px) and (max-width: 768px) {
+  .portfolio-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns layout */
+    gap: 20px;
+  }
+
+  .portfolio-img {
+    height: 220px; /* Slightly larger image for tablets */
+  }
+}
+
+/* For larger screens (Desktops) */
+@media (min-width: 768px) and (max-width: 992px) {
+  .portfolio-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columns layout */
+    gap: 30px;
+  }
+
+  .portfolio-img {
+    height: 250px; /* Default height for medium screens */
+  }
+}
+
+/* For extra large screens (Large Desktops) */
+@media (min-width: 1200px) {
+  .portfolio-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columns layout */
+    gap: 30px;
+  }
+
+  .portfolio-img {
+    height: 250px; /* Maintain the default size for large screens */
+  }
+}
+
+
 @media (max-width: 1199px) {
   #footer {
     position: static;
